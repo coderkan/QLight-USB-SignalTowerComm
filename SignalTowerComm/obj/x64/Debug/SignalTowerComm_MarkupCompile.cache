@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Debug\
+C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\x64\Debug\
 SignalTowerComm
 none
 false
@@ -13,7 +13,7 @@ C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerC
 2-1283739803
 
 9-1633391669
-141190334070
+14688439268
 MainWindow.xaml;View\TowerControllerView.xaml;
 
 False

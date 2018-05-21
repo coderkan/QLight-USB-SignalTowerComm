@@ -35,15 +35,20 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
-                <TextBox Name="Txt_Command" Grid.Column="0" Grid.Row="0" Text="{Binding StrCommandLine}" />
-                <Button Name="btn_SendCommand" Content="Send" Grid.Column="1" Grid.Row="0" Command="{Binding SendCommand}"/>
+                    <TextBox Visibility="Hidden"  Name="Txt_Command" Grid.Column="0" Grid.Row="0" Text="{Binding StrCommandLine}" />
+                    <Button Visibility="Hidden" Name="btn_SendCommand" Content="Send" Grid.Column="1" Grid.Row="0" Command="{Binding SendCommand}"/>
 
                     <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
-                        <Button Name="Txt_Reset" Content="Reset" Command="{Binding ResetCommand}" />
-                        <Button Name="Txt_RedOnOff" Content="{Binding StrRedCommand}" Command="{Binding RedCommand}" />
-                        <Button Name="Txt_YellowOnOff" Content="{Binding StrYellowCommand}" Command="{Binding YellowCommand}"  />
-                        <Button Name="Txt_GreenOnOff" Content="{Binding StrGreenCommand}" Command="{Binding GreenCommand}"  />
-                        <Button Name="Txt_BuzzerOnOff" Content="{Binding StrBuzzerCommand}" Command="{Binding BuzzerCommand}"  />
+                        <Button Visibility="Hidden" Name="Txt_Reset" Content="Reset" Command="{Binding ResetCommand}" />
+                        <Button Visibility="Hidden" Name="Txt_RedOnOff" Content="{Binding StrRedCommand}" Command="{Binding RedCommand}" />
+                        <Button Visibility="Hidden" Name="Txt_YellowOnOff" Content="{Binding StrYellowCommand}" Command="{Binding YellowCommand}"  />
+                        <Button Visibility="Hidden" Name="Txt_GreenOnOff" Content="{Binding StrGreenCommand}" Command="{Binding GreenCommand}"  />
+                        <Button Visibility="Hidden" Name="Txt_BuzzerOnOff" Content="{Binding StrBuzzerCommand}" Command="{Binding BuzzerCommand}"  />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" >
+                        <Button Name="Btn_Start"  Content="Start" Command="{Binding StartCommand}" Width="75" RenderTransformOrigin="-0.359,0.502" />
+                        <Button Name="Btn_Stop"  Content="Stop" Command="{Binding StopCommand}" Width="75" RenderTransformOrigin="-0.359,0.502" Padding="1" Margin="5,0,0,0" />
+
                     </StackPanel>
                 </Grid>
             </Grid>

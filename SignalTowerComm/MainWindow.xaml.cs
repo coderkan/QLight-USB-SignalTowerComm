@@ -24,5 +24,10 @@ namespace SignalTowerComm
             InitializeComponent();
             GalaSoft.MvvmLight.Threading.DispatcherHelper.Initialize();
         }
+
+        private void TowerController_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

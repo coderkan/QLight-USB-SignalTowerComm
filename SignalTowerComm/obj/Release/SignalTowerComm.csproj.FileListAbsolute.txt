@@ -1,0 +1,7 @@
+C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Release\SignalTowerComm.csprojAssemblyReference.cache
+C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Release\MainWindow.g.cs
+C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Release\View\TowerControllerView.g.cs
+C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Release\App.g.cs
+C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Release\SignalTowerComm_MarkupCompile.cache
+C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Release\SignalTowerComm_MarkupCompile.lref

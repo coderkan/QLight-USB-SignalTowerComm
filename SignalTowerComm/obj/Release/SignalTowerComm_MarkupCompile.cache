@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Debug\
+C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\obj\Release\
 SignalTowerComm
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerComm\App.xaml
 2-1283739803
 
@@ -16,5 +16,5 @@ C:\Users\T135552\Desktop\zZzZ\QLight\ql2\QLight-USB-SignalTowerComm\SignalTowerC
 141190334070
 MainWindow.xaml;View\TowerControllerView.xaml;
 
-False
+True
 

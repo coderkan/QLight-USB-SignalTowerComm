@@ -24,5 +24,6 @@ namespace SignalTowerComm.View
             InitializeComponent();
             GalaSoft.MvvmLight.Threading.DispatcherHelper.Initialize();
         }
+ 
     }
 }
