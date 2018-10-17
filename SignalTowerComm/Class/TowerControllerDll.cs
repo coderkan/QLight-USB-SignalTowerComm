@@ -8,13 +8,13 @@ namespace SignalTowerComm.Class
 {
     class TowerControllerDll
     {
-        [DllImport("Ux64_dllc.dll")]
+        [DllImport("QUvc_dll.dll")]
         public static extern void Usb_Qu_Open();
-        [DllImport("Ux64_dllc.dll")]
+        [DllImport("QUvc_dll.dll")]
         public static extern void Usb_Qu_Close();
-        [DllImport("Ux64_dllc.dll")]
+        [DllImport("QUvc_dll.dll")]
         public static unsafe extern bool Usb_Qu_write(byte Q_index, byte Q_type, byte* pQ_data);
-        [DllImport("Ux64_dllc.dll")]
+        [DllImport("QUvc_dll.dll")]
         public static extern int Usb_Qu_Getstate();
 
         public TowerControllerDll()

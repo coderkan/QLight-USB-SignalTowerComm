@@ -8,6 +8,7 @@ using System.Windows;
 using System.Threading;
 using System.Collections;
 using System.IO;
+using System.Net;
 
 namespace SignalTowerComm.ViewModel
 {
@@ -99,6 +100,7 @@ namespace SignalTowerComm.ViewModel
         private Thread mThread;
         private Thread ioThread;
         private bool alarmOccur = false;
+        private WebClient webClient;
 
         #endregion
 
@@ -196,8 +198,44 @@ namespace SignalTowerComm.ViewModel
         {
             Console.WriteLine("This is worker thread. ThreadID: {0}", Thread.CurrentThread.ManagedThreadId);
             stopped = false;
+            string uri = "http://dts.hyundai.com.tr/RTISS/alarm1.aspx";
             while (running)
             {
+
+                webClient = new WebClient();
+                try
+                {
+                    webClient.QueryString.Add("parm", "1");
+                    webClient.QueryString.Add("comp", "1");
+                    var data = webClient.UploadValues(uri, "POST", webClient.QueryString);
+                    var resString = UnicodeEncoding.UTF8.GetString(data);
+                    int len = resString.IndexOf("||");
+                    string dfid = resString.Substring(0, len);
+                    if (!"0".Equals(dfid))
+                    {
+                        //otturulecek.....
+                        alarmOccur = true;
+                        webClient = new WebClient();
+                        webClient.QueryString.Add("parm", "2");
+                        webClient.QueryString.Add("dfid", dfid);
+                        data = webClient.UploadValues(uri, "POST", webClient.QueryString);
+                        resString = UnicodeEncoding.UTF8.GetString(data);
+                        Console.WriteLine("Defect Id = " + dfid + " is alarmed.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No data for alarm.");
+                    }
+                    //
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Exception : " + ex.Message);
+                }
+
+
+
+                /*
                 ArrayList readlines = new ArrayList();
                 ArrayList newList = new ArrayList();
                 String file = "C:\\alarm_data.txt";
@@ -250,6 +288,7 @@ namespace SignalTowerComm.ViewModel
                 {
                     Console.WriteLine("Executing finally block.");
                 }
+                */
                 Thread.Sleep(1000);
             }
             Console.WriteLine("This is worker thread stoped. ThreadID: {0}", Thread.CurrentThread.ManagedThreadId);
@@ -262,9 +301,11 @@ namespace SignalTowerComm.ViewModel
             {
                 if (alarmOccur)
                 {
+                    Console.WriteLine("Alarm Begined...");
                     command(C.R, true);
                     command(C.Buzzer, true);
                     Thread.Sleep(7000);
+                    Console.WriteLine("Alarm Finished...");
                     command(C.R, false);
                     command(C.Buzzer, false);
                     alarmOccur = false;
